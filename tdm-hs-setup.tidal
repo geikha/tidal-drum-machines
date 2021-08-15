@@ -1,0 +1,7 @@
+let drumMachine name ps = stack 
+                    (map (\ x -> 
+                        (# s (name ++| (extractS "s" (x)))) $ x
+                        ) ps)
+    drumFrom name drum = s (name ++| drum)
+    drumM = drumMachine
+    drumF = drumFrom
