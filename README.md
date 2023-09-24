@@ -7,6 +7,23 @@ See the full list of drum machines [here](/machines).
 
 ---
 
+### Installation
+
+```supercollider
+// install this repository
+Quarks.install("https://github.com/geikha/tidal-drum-machines.git");
+
+// add this to your superdirt startup
+~drumMachinesDir = Quarks.all.detect({ |x| x.name == "tidal-drum-machines" }).localPath;
+~dirt.loadSoundFiles(~drumMachinesDir +/+ "machines" +/+ "*" +/+ "*", namingFunction: { |x| x.basename.replace("-","")})
+
+// test in sclang
+(type:\dirt, s: \rolandtr909cr, n: 0).play;
+```
+Thanks [Julian](https://github.com/telephon) for the installation script!
+
+---
+
 ## How to use
 
 Run the custom SuperCollider bootup found in [tdm-sc-boot.scd](/tdm-sc-boot.scd), or add the necessary parts to your own bootup. Then run the haskell/tidal code found in [tdm-hs-setup.tidal](/tdm-hs-setup.tidal), or just copy and paste it from here:
