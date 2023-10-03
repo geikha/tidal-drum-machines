@@ -16,6 +16,7 @@ Quarks.install("https://github.com/geikha/tidal-drum-machines.git");
 // add this to your superdirt startup
 ~drumMachinesDir = Quarks.all.detect({ |x| x.name == "tidal-drum-machines" }).localPath;
 ~dirt.loadSoundFiles(~drumMachinesDir +/+ "machines" +/+ "*" +/+ "*", namingFunction: { |x| x.basename.replace("-","")})
+// Windows Users: (~drumMachinesDir +/+ "machines" +/+ "*").pathMatch.do({ |x| ~dirt.loadSoundFiles(x +/+ "*") })
 
 // test in sclang
 (type:\dirt, s: \rolandtr909cr, n: 0).play;
