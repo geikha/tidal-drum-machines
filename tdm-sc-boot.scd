@@ -9,7 +9,7 @@ s.waitForBoot {
 
 	//~dirt.loadSoundFiles();
 
-	~drumMachinesDir = PathName.new("C:\\Users\\Renzo\\Documents\\Tidal\\tidal-drum-machines\\machines");
+	~drumMachinesDir = PathName.new("C:\\some\\path\\tidal-drum-machines\\machines");
 	~machines = ~drumMachinesDir.folders; //All drum machines
 	/*~machines = ['Linn9000','RolandTR909']; //Selected drum machines
 	~machines.do { arg m,i; ~machines[i]=(~drumMachinesDir+/+m) }*/
